@@ -1,0 +1,18 @@
+name: firebolt-alfred-docs-workflow
+version: 0.1.0
+
+authors:
+  - Alexander Reelsen <alexander@reelsen.net>
+
+targets:
+  firebolt-alfred-docs-workflow:
+    main: src/firebolt-alfred-docs-workflow.cr
+
+dependencies:
+  fuzzy_match:
+    github: acoustep/fuzzy_match.cr
+    version: 0.3.0
+
+crystal: 1.5.0
+
+license: MIT

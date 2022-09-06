@@ -1,0 +1,6 @@
+version: 2.0
+shards:
+  fuzzy_match:
+    git: https://github.com/acoustep/fuzzy_match.cr.git
+    version: 0.3.0
+
