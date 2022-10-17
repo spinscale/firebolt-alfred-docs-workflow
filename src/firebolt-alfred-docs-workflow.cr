@@ -12,7 +12,12 @@ end
 # fetching the json data
 lock_path = path / "search-data.json.lock"
 if File.exists?(lock_path)
-  exit
+  is_lock_stale = Time.utc - File.info(lock_path).modification_time > 1.hours
+  if is_lock_stale
+    File.delete? lock_path
+  else
+    exit
+  end
 end
 
 # check for download in last 8h
